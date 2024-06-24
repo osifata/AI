@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Impact;
+    font-family: Tahoma;
 }
 
 body {
@@ -41,6 +41,7 @@ body {
 }
 
 .right-block h1 {
+    font-family: Impact;
     text-align: center;
     margin-top: 130px;
     font-size: 100px;
@@ -48,7 +49,6 @@ body {
 }
 
 .right-block p {
-    font-family: Tahoma;
     text-align: center;
     font-size: 32px;
     margin-bottom: 200px;
@@ -67,10 +67,10 @@ body {
     cursor: pointer;
     background-color: #FFF069;
     color: #000000;
-    letter-spacing: 0.3cm;
     text-align: center;
     border: none;
     border-radius: 5px;
+    box-shadow: 4px 4px 0px -1px rgba(34, 60, 80, 0.2);
     transition: background-color 0.3s ease;
 }
 
