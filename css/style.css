@@ -5,10 +5,6 @@
     font-family: Tahoma;
 }
 
-body {
-    font-family: Arial, sans-serif;
-}
-
 /* контейнер для блоков */
 .container {
     display: flex;
