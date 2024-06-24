@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageWrapper = document.querySelector('.image-wrapper');
     const images = document.querySelectorAll('.slide');
     const continueBtn = document.querySelector('.continue-btn');
-    let currentIndex = 0;
+    let currentIndex = 0; // Изменяем начальный индекс на второе изображение
 
     function updateScroll() {
-        const offset = currentIndex * (100 / 3); // Adjust offset based on image width
-        imageWrapper.style.transform = `translateX(-${offset}%)`;
+        const offset = currentIndex * -65; // Рассчитываем смещение
+        imageWrapper.style.transform = `translateX(${offset}%)`;
     }
 
     leftBtn.addEventListener('click', () => {
@@ -19,14 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     rightBtn.addEventListener('click', () => {
-        if (currentIndex < images.length - 3) { // Allow scrolling till the last set of images
+        if (currentIndex < images.length - 1) { // Добавляем проверку для правой кнопки
             currentIndex++;
             updateScroll();
         }
     });
 
-    images.forEach(image => {
+    // Дополнительно: обработчик кликов на изображениях для выделения выбранного
+    images.forEach((image, index) => {
         image.addEventListener('click', () => {
+            currentIndex = index; // Устанавливаем текущий индекс при клике на изображение
+            updateScroll();
             images.forEach(img => img.classList.remove('selected'));
             image.classList.add('selected');
             continueBtn.style.display = 'block';
