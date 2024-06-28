@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tahoma;
+}
+
+/* контейнер для блоков */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* левая сторона */
+.left-block {
+    background: url(../res/image.png) no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.left-block .logo {
+    margin-left: 30px;
+    margin-top: 30px;
+    height: 70px;
+}
+
+/* правая сторона */
+.right-block {
+    width: 50%;
+    height: 100%;
+    background: url(../res/uzorr2.png) no-repeat;
+    background-position: 0px 30px;
+    background-size: cover;
+    position: relative;
+}
+
+.right-block h1 {
+    font-family: Impact;
+    text-align: center;
+    margin-top: 130px;
+    font-size: 100px;
+    position: relative;
+}
+
+.right-block p {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 200px;
+    position: relative;
+}
+
+/* кнопка */
+.action-btn {
+    width: 300px;
+    height: 80px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 36px;
+    cursor: pointer;
+    background-color: #FFF069;
+    color: #000000;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 4px 4px 0px -1px rgba(34, 60, 80, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #CCCBE7;
+}
+a {
+    text-decoration: none;
+    color:#000000;
+}
+/* медиазапрос для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-block, .right-block {
+        width: 100%;
+        height: 50vh;
+        position: relative;
+    }
+
+    .left-block .logo {
+        height: 20px;
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+
+    .right-block h1 {
+        margin-top: 80px;
+        font-size: 20px;
+    }
+
+    .right-block p {
+        font-size: 16px;
+        margin-bottom: 100px;
+    }
+
+    .action-btn {
+        width: 150px;
+        height: 60px;
+        font-size: 16px;
+        padding: 10px;
+    }
+}

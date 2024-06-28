@@ -1,0 +1,351 @@
+* {
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tahoma;
+}
+/* body {
+	background-color: rgb(255, 255, 255);
+	margin: 0;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+} */
+.main-container {
+	display: flex;
+	height: 130vh;
+}
+.constructor {
+	/* width: 730px;
+	background-color: white;
+	height: 1000px;
+	padding-left: 30px;
+	box-sizing: border-box;
+	padding-top: 50px; */
+	background-size: cover;
+	width: 53%;
+    height: 100%;
+    position: relative;
+	padding-left: 5%;
+	padding-top: 7%;
+}
+.right-block {
+	width: 47%;
+    height: 100%;
+    /* background-size: cover; */
+    position: relative;
+	padding-left: 30px;
+	padding-top: 50px;
+	background-color: #EBEAEA;
+}
+.label-name {
+	display: block;
+	font-size: 16px;
+	color: rgb(0, 0, 0);
+	margin-bottom: 7px;
+}
+.card-example {
+	position: relative;
+	left: 17%;
+	top: 25%;
+	width: 450px;
+	height: 270px;
+	min-width: 450px;
+	min-height: 270px;
+	background-color: white;
+	border: rgb(161, 161, 161) 1px solid;
+	font-size: 14px;
+	padding-top: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+	box-sizing: border-box;
+	color: #202020;
+}
+
+.block  {
+	height: 80px;
+	margin-bottom: 15px;
+}
+.visual-block {
+	height: 300px;
+	margin-bottom: 15px;
+}
+.container > label > input {
+	width: 400px;
+	height: 50px;
+	outline: none;
+	border: rgb(156,156,156) solid 1px;
+	border-radius: 3px;
+	padding: 7px 0px 7px 9px;
+	transition: all 0.20s ease-in-out;
+}
+.container > label > input:focus {
+	outline: #2684FF;
+	border-color: #2684FF;
+}
+.inner-text {
+	color: #757575;
+	font-size: 14px;
+	margin-top: 10px;
+}
+.image-upload{
+	width: 500px;
+	height: 30px;
+	margin-top: 1%;
+}
+.preview {
+	width: 500px;
+	height: 200px;
+	border: rgb(156,156,156) solid 1px;
+}
+img {
+	height: 200px;
+}
+#font-select {
+	width: 400px;
+	height: 50px;
+	padding: 7px 0px 7px 9px;
+	color: #757575;
+}
+
+.inner-container {
+	display: flex;
+	justify-content: space-between;
+	color: #202020;
+	line-height: 22px;
+	max-height: 25px;
+	margin: 20px 50px 0px 50px;
+}
+.straigthen > input[type="radio"], 
+.palette > input[type="radio"],
+.palette > label > input[type="radio"], 
+.fsize > input[type="radio"] {
+	position: fixed;
+	opacity: 0;
+	width: 0;
+	margin: 0;
+	height: 100%;
+}
+.straigthen, .fsize {
+	font-size: 12px;
+	text-align: center;
+	box-sizing: border-box;
+}
+.inner-container_straighten-block, .inner-container_size-block {
+	box-sizing: border-box;
+	overflow: hidden;
+	width: 100px;
+	width: auto;
+	border: rgb(156,156,156) solid 1px;
+	border-radius: 3px;
+}
+.straigthen {
+	display: inline-block;
+	cursor: pointer;
+	width: 32px;
+	text-align: center;
+	line-height: 22px;
+	height: 100%;
+}
+.fsize {
+	display: inline-block;
+	cursor: pointer;
+	max-width: 30px;
+	line-height: 22px;
+	height: 100%;
+}
+.straigthen-img {
+	padding: 4px 2px 0px 2px;
+}
+.fsize > span {
+	padding: 4px 2px 6px 2px;
+}
+.straigthen > input[type="radio"]:checked + .straigthen-img {
+	background-color:  #D9D9D9;
+}
+.fsize > input[type="radio"]:checked + span {
+	background-color:  #D9D9D9;
+}
+.palette {
+	display: flex;
+	flex-direction: row;
+	width: 200px;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+.palette > label {
+	margin-right: 5px;
+	border-radius: 100px;
+	background-color: #fff;
+	cursor: pointer;
+}
+.not-checked {
+	border: 12px solid;
+	width: 0;
+	height: 0;
+}
+.checked {
+	border: 7px solid;
+	width: 10px;
+	height: 10px;
+}
+.lcolorful1 {
+	border-color: #000;
+}
+.lcolorful2 {
+	border-color: #3F88E8;
+}
+.lcolorful3 {
+	border-color: #E83F56;
+}
+.lcolorful4 {
+	border-color: #097A14;
+}
+.lcolorful5 {
+	border-color: #DCA40A;
+}
+.lcolorful6 {
+	border-color: #DC0AD5;
+}
+.lblack1 {
+	border-color: #202020;
+}
+.lblack2 {
+	border-color: #474747;
+}
+.lblack3 {
+	border-color: #636363;
+}
+.lblack4 {
+	border-color: #9E9E9E;
+}
+.lblack5 {
+	border-color: #BBBBBB;
+}
+.lblack6 {
+	border-color: #E3E3E3;
+}
+.inner-block > span {
+	margin-left: 5px;
+	text-align: left;
+	font-size: 12px;
+	color: #707070;
+}
+.inner-block {
+	margin-top: 7px;
+}
+.addPhone {
+	cursor: pointer;
+	width: 17px;
+	height: 17px;
+}
+.showMail, .showLocation {
+	color: #707070;
+}
+.inner-container > label {
+	color: #707070;
+	font-size: 12px;
+}
+.submit-button {
+	background-color: #FFF069;
+	color: #000000;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 4px 4px 0px -1px rgba(34, 60, 80, 0.2);
+    transition: background-color 0.3s ease;
+	height: 35px;
+	width: 130px; 
+	line-height: 35px;
+	cursor: pointer;
+}
+.submit-button:hover {
+	background-color: #CCCBE7;
+}
+.export-button {
+	float: right;
+    position: relative;
+    right: 15%;
+	top: 26%;
+	background-color: #FFF069;
+	color: #000000;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 4px 4px 0px -1px rgba(34, 60, 80, 0.2);
+    transition: background-color 0.3s ease;
+	height: 35px;
+	width: 130px; 
+	line-height: 35px;
+	cursor: pointer;
+}
+.export-button:hover {
+	background-color: #CCCBE7;
+}
+.Org-card-example {
+	font-size: 10px;
+	margin-bottom: 35px;
+}
+.phone-card-example, .mail-card-example, 
+.location-card-example, .phone2-card-example {
+	font-size: 12px;
+}
+.name-example {
+	font-size: 26px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.Org-card-example, .name-card-example, .position-card-example {
+	text-align: center;
+}
+.hidden-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 7px;
+	width: 200px;
+}
+.hidden-block > input {
+	height: 22px;
+	border: rgb(156,156,156) solid 1px;
+	border-radius: 3px;
+}
+.removePhone {
+	cursor: pointer;
+	width: 17px;
+	height: 17px;
+	margin-top: 2.5px;
+}
+/* img {
+	cursor: pointer;
+} */
+.none {
+	display: none;
+}
+.inner-container_size-block {
+	margin-left: 20px;
+}
+.extra-info-block {
+	margin-top: 25px; 
+	margin-left: 50%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .constructor, .right-block {
+        width: 100%;
+        height: 50vh;
+        position: relative;
+    }
+/* 
+    .action-btn {
+        width: 150px;
+        height: 60px;
+        font-size: 16px;
+        padding: 10px;
+    } */
+}

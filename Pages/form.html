@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <link rel="stylesheet" href="css/form_style.css">
+</head>
+<body>
+    <!-- <header>
+        
+        <button class="login-btn">
+            <img src="login-icon.png" alt="Вход">
+        </button>
+    </header> -->
+    <main>
+        <h1 id="shadow">АНКЕТА</h1>
+        <h1>АНКЕТА</h1>
+        <div class="name">Общая информация</div>
+        <!-- <div class="container">
+            <div class="center-block">
+                <p>Внимание вопрос</p>
+                <button class="action-btn">Далее</button>
+            </div>
+        </div> -->
+
+        <div class="container">
+            <div class="center-block">
+                <div class="tab-status">
+                    <span class="tab active">1</span>
+                    <span class="tab">2</span>
+                    <span class="tab">3</span>
+                    <span class="tab">4</span>
+                    <span class="tab">5</span>
+                    <span class="tab">6</span>
+                    <span class="tab">7</span>
+                    <span class="tab">8</span>
+                    <span class="tab">9</span>
+                </div>
+                <form action="#">
+                    <div class="question-list" role="tab-list">
+                        <div role="tabpanel" id="link1" class="tabpanel">
+                            <h3>Рекламируемая страница</h3>
+                            <textarea name="link" class="form-input" placeholder="Ссылка на страницу товара"></textarea>
+                        </div>
+                        <div role="tabpanel" id="occupation1" class="tabpanel hidden">
+                            <h3>Как называется ваш бизнес?</h3>
+                            <div class="inner-text">Название компании или вид деятельности, например «Торты на заказ»</div>
+                            <textarea name="name" class="form-input resizing" placeholder="Название бизнеса"></textarea>
+                            <h3>Чем вы занимаетесь?</h3>
+                            <div class="inner-text">Расскажите о своих преимуществах, чтобы заинтересовать клиентов. Например, «Готовим десерты за 1-2 дня. <br>У нас бесплатная доставка по городу»</div>
+                            <textarea name="feature" class="form-input resizing" placeholder="Особенности и преимущества вашего бизнеса"></textarea>
+                        </div>
+                        <div role="tabpanel" id="contacts1" class="tabpanel hidden">
+                            <h3>Адрес в объявлении</h3>
+                            <textarea name="adress" class="form-input resizing" placeholder="Адрес организации"></textarea>
+                            <h3>Телефон в объявлении</h3>
+                            <input type="tel" name="tel" class="phone form-input"  placeholder="Телефон организации">
+                        </div>
+                        <div role="tabpanel" id="interests1" class="tabpanel hidden">
+                            <h3>Интересы и привычки</h3>
+                            <div class="inner-text">Посещаемые сайты и организации, используемые приложения, интересы и привычки аудитории, которой вы хотите показывать объявления</div>
+                            <textarea name="link" class="form-input" placeholder="Опишите аудиторию или введите интересы и привычки"></textarea>
+                        </div>
+                        <div role="tabpanel" id="format1" class="tabpanel select-box hidden">
+                            <h3>Формат объявления</h3>
+                            <select name="sources" id="sources" class="form-input custom-select sources" placeholder="Формат объявления">
+                                <option value="vertical">Вертикальный</option>
+                                <option value="horizontal">Горизонтальный</option>
+                                <option value="square">Квадратный</option>
+                            </select>
+                        </div>
+                        <div role="tabpanel" id="words1" class="tabpanel hidden">
+                            <h3>Ключевые фразы</h3>
+                            <div class="inner-text">Это слова или словосочетания, с которыми совпадает етматика вашего бизнеса</div>
+                            <textarea name="keyword" class="form-input resizing" placeholder="Введите фразу или список фраз"></textarea>
+                            <h3>Минус-фразы</h3>
+                            <div class="inner-text">Слова или словосочетания, по которым ваше обяъвление не должно создаваться</div>
+                            <textarea name="minusword" class="form-input resizing" placeholder="Введите фразу или список фраз"></textarea>
+                        </div>
+                        <div role="tabpanel" id="img1" class="tabpanel hidden">
+                            <h3>Изображение</h3>
+                            <div class="inner-text">Опишите, что вы должно быть на фоновом изображении объявления</div>
+                            <textarea name="image" class="form-input resizing" placeholder="Описание изображения"></textarea>
+                        </div>
+                        <div role="tabpanel" id="color1" class="tabpanel hidden">
+                            <h3>Цветовые схемы</h3>
+                            <div class="inner-text">Выберете до 3 цветовых палитр, кторые соотвествуют вашему бизнесу</div>
+                            <div class="checkbox-group">
+                                <div class="checkbox">
+                                    <label class="checkbox-wrapper">
+                                        <input type="checkbox" class="checkbox-input" />
+                                        <div class="checkbox-tile  black">
+                                            <div class="checkbox-label">Серый</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label class="checkbox-wrapper">
+                                        <input type="checkbox" class="checkbox-input"/>
+                                        <div class="checkbox-tile blue">
+                                            <div class="checkbox-label">Синий</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label class="checkbox-wrapper">
+                                        <input type="checkbox" class="checkbox-input" />
+                                        <div class="checkbox-tile red">
+                                            <div class="checkbox-label">Красный</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label class="checkbox-wrapper">
+                                        <input type="checkbox" class="checkbox-input" />
+                                        <div class="checkbox-tile green">
+                                            <div class="checkbox-label">Зеленый</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label class="checkbox-wrapper">
+                                        <input type="checkbox" class="checkbox-input" />
+                                        <div class="checkbox-tile yellow">
+                                            <div class="checkbox-label">Желтый</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label class="checkbox-wrapper">
+                                        <input type="checkbox" class="checkbox-input form-input" />
+                                        <div class="checkbox-tile cyan">
+                                            <div class="checkbox-label">Бирюзовый</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label class="checkbox-wrapper">
+                                        <input type="checkbox" class="checkbox-input" />
+                                        <div class="checkbox-tile orange">
+                                            <div class="checkbox-label">Оранжевый</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label class="checkbox-wrapper">
+                                        <input type="checkbox" class="checkbox-input"/>
+                                        <div class="checkbox-tile pink">
+                                            <div class="checkbox-label">Розовый</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label class="checkbox-wrapper">
+                                        <input type="checkbox" class="checkbox-input"/>
+                                        <div class="checkbox-tile purple">
+                                            <div class="checkbox-label">Фиолетовый</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" id="button1" class="tabpanel hidden">
+                            <h3>Текст на нопке</h3>
+                            <div class="inner-text">Повысьте эффективновсть объявления за счёт подходчящего призыва к действию и ссылки на кнопке</div>
+                            <select name="sources" id="sources" class="form-select custom-select sources" placeholder="Текст на кнопке">
+                                <option value="choice1">Перейти на сайт</option>
+                                <option value="choice2">Узнать больше</option>
+                                <option value="choice3">Подать заявку</option>
+                                <option value="choice4">Забронировать</option>
+                                <option value="choice5">Выбрать</option>
+                                <option value="choice6">Смотреть</option>
+                                <option value="choice7">Зарегестрироваться</option>
+                                <option value="choice8">Попробовать</option>
+                                <option value="choice9">Получить предложение</option>
+                            </select>
+                            <h3>Ссылка на кнопке</h3>
+                            <textarea name="btnlink" class="form-input resizing" placeholder="Ссылка на кнопке"></textarea>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <a class="btn hidden" id="prev">Предыдущий</a>
+                        <a class="btn" id="next">Далее</a>
+                        <button class="btn btn-submit hidden" id="submit">Сгенерировать</button>
+                    </div>
+                </form>
+            </div>
+          </div>
+
+
+    </main>
+    <script defer src="script/form_script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+	<script>
+		$(function() {
+		$('.phone').mask('+7(000)000-00-00');
+		});
+
+        $(".custom-select").each(function() {
+        var classes = $(this).attr("class"),
+            id      = $(this).attr("id"),
+            name    = $(this).attr("name");
+        var template =  '<div class="' + classes + '">';
+            template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+            template += '<div class="custom-options">';
+            $(this).find("option").each(function() {
+                template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+            });
+        template += '</div></div>';
+        
+        $(this).wrap('<div class="custom-select-wrapper"></div>');
+        $(this).hide();
+        $(this).after(template);
+        });
+        $(".custom-option:first-of-type").hover(function() {
+        $(this).parents(".custom-options").addClass("option-hover");
+        }, function() {
+        $(this).parents(".custom-options").removeClass("option-hover");
+        });
+        $(".custom-select-trigger").on("click", function() {
+        $('html').one('click',function() {
+            $(".custom-select").removeClass("opened");
+        });
+        $(this).parents(".custom-select").toggleClass("opened");
+        event.stopPropagation();
+        });
+        $(".custom-option").on("click", function() {
+        $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+        $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+        $(this).addClass("selection");
+        $(this).parents(".custom-select").removeClass("opened");
+        $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+        });
+
+        $('input[type=checkbox]').on('change', function (e) {
+            if ($('input[type=checkbox]:checked').length > 3) {
+                $(this).prop('checked', false);
+            }
+        });
+    </script>  
+</body>
+</html>

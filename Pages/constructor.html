@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Конструктор</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/constr_style.css">
+</head>
+<body>
+	<main>
+		<div class="main-container">
+			<div class="constructor">
+				<!-- <h2>Конструктор объявления</h2> -->
+				<!-- <div class="required-field">* Обязательное поле</div> -->
+				<form method="post" enctype="multipart/form-data">
+					<div class="block">
+						<div class="container">
+							<label for="header">
+								<div class="label-name">Заголовок</div>
+								<input type="text" name="" placeholder="Измените заголовок объявления" >
+							</label>
+						</div>
+					</div>
+					<div class="block">
+						<div class="container">
+							<label for="main">
+								<div class="label-name">Основной текст</div>
+								<input type="text" name="" placeholder="Измените основной текст объявления">
+							</label>
+							<!-- <div class="inner-container">
+								<div class="inner-container_straighten-block"> 
+									<label class="straigthen">
+										<input type="radio" name="straigthen" value="left">
+										<div class="straigthen-img">
+											<img src="resources/left.svg">
+										</div>
+									</label>
+									<label class="straigthen">
+										<input type="radio" name="straigthen" checked="" value="center">
+										<div class="straigthen-img">
+											<img src="resources/center.svg">
+										</div>
+									</label>
+									<label class="straigthen">
+										<input type="radio" name="straigthen" value="right">
+										<div class="straigthen-img">
+											<img src="resources/right.svg">
+										</div>
+									</label>
+								</div>
+								<div class="inner-container_size-block">
+									<label class="fsize">
+										<input type="radio" name="fsize" value="24px">
+										<span>24px</span>
+									</label>
+									<label class="fsize">
+										<input type="radio" name="fsize" checked="" value="26px">
+										<span>26px</span>
+									</label>
+									<label class="fsize">
+										<input type="radio" name="fsize" value="28px">
+										<span>28px</span>
+									</label>
+								</div>
+							</div> -->
+						</div>
+						<!-- <div class="palette">
+							<label class="lcolorful1">
+								<input type="radio" name="color" checked="" value="#000">
+							</label>
+							<label class="lcolorful2">
+								<input type="radio" name="color" value="#3F88E8">
+							</label>
+							<label class="lcolorful3">
+								<input type="radio" name="color" value="#E83F56">
+							</label>
+							<label class="lcolorful4">
+								<input type="radio" name="color" value="#097A14">
+							</label> 
+							<label class="lcolorful5">
+								<input type="radio" name="color" value="#DCA40A">
+							</label>
+							<label class="lcolorful6">
+								<input type="radio" name="color" value="#DC0AD5">
+							</label>
+						</div> -->
+					</div>
+					<div class="second">
+						<div class="visual-block">
+							<div class="container">
+								<div class="label-name">Изображение<br>
+									<div class="inner-text">На изображении не должно быть текста. Размер — не менее 450 × 450 пикселей, не более 10 Мбайт</div>
+									<!-- <label for="image-upload" >Добавить</label> -->
+									<input type="file" name="file" class="image-upload" accept=".jpg, .jpeg, .png">
+								</div>
+								<div class="preview"></div>
+							</div>
+						</div>
+							<!-- <div class="inner-container">
+								<div class="inner-container_straighten-block"> 
+									<label class="straigthen">
+										<input type="radio" name="straigthen2" value="left">
+										<div class="straigthen-img">
+											<img src="resources/left.svg">
+										</div>
+									</label>
+									<label class="straigthen">
+										<input type="radio" name="straigthen2" checked="" value="center">
+										<div class="straigthen-img">
+											<img src="resources/center.svg">
+										</div>
+									</label>
+									<label class="straigthen">
+										<input type="radio" name="straigthen2" value="right">
+										<div class="straigthen-img">
+											<img src="resources/right.svg">
+										</div>
+									</label>
+								</div>
+								<div class="inner-container_size-block">
+									<label class="fsize">
+										<input type="radio" name="fsize2" value="14px">
+										<span>14px</span>
+									</label>
+									<label class="fsize">
+										<input type="radio" name="fsize2" value="16px" checked="">
+										<span>16px</span>
+									</label>
+									<label class="fsize">
+										<input type="radio" name="fsize2" value="18px">
+										<span>18px</span>
+									</label>
+								</div>
+							</div> -->
+						
+						
+						<div class="visual-block ">
+							<div class="container">
+								<div class="label-name">Логотип<br>
+									<div class="inner-text">Размер — не менее 450 × 450 пикселей, не более 10 Мбайт</div>
+
+									<input type="file" name="file" class="image-upload" accept=".jpg, .jpeg, .png">
+								</div>
+								<div class="preview"></div>
+							</div>
+						</div>
+						<div class="block">
+							<div class="container">
+								<label for="font">
+									<div class="label-name">Шрифт</div>
+									<select name="fonts" id="font-select">
+										<option value="times">Times New Roman</option>
+										<option value="arial">Arial</option>
+										<option value="helv">Helvetica</option>
+									</select>
+								</label>
+							</div>
+						</div>
+					</div>
+
+						<!-- <div class="palette">
+							<label class="lblack1">
+								<input type="radio" name="color2" checked="" value="#202020">
+							</label>
+							<label class="lblack2">
+								<input type="radio" name="color2" value="#474747">
+							</label> 
+							<label class="lblack3">
+								<input type="radio" name="color2" value="#636363">
+							</label>
+							<label class="lblack4">
+								<input type="radio" name="color2" value="#9E9E9E">
+							</label> 
+							<label class="lblack5">
+								<input type="radio" name="color2" value="#9E9E9E">
+							</label>
+							<label class="lblack6">
+								<input type="radio" name="color2" value="#E3E3E3">
+							</label>
+						</div> -->
+					
+					<!-- <div class="block">
+						<div class="container">
+							<label for="phone">
+								<div class="label-name">Телефон</div>
+								<input type="tel" name="" class="phone"  placeholder="+7">
+							</label>
+						</div>	
+						<div class="inner-block">
+							<img src="resources/add.svg" class="addPhone">
+							<span>Добавить еще один телефон</span>
+						</div>
+						<div class="hidden-block none">
+							<input type="tel" name="" class="phone2" value="no_extra_phone" placeholder="+7">
+							<img src="resources/remove.svg" class="removePhone">
+						</div>
+					</div> -->
+					<!-- <div class="block">
+						<div class="container">
+							<label for="mail">
+								<div class="label-name">E-mail</div>
+								<input type="email" name="" class="mail" >
+							</label>
+							<div class="inner-container">
+								<label>
+									<input type="checkbox" name="" checked="" class="showMail">
+									Отображать
+								</label>
+							</div>
+						</div>
+					</div> -->
+					<!-- <div class="block">
+						<div class="container">
+							<label for="location">
+								<div class="label-name">Адрес</div>
+								<input type="text" name="" class="location" >
+							</label>
+							<div class="inner-container">
+								<label>
+									<input type="checkbox" name="" checked="" class="showLocation">
+									Отображать
+								</label>
+							</div>	
+						</div>
+					</div> -->
+					<div class="submit-button">Применить</div>
+				</form>
+			</div>
+			<div class="right-block">
+				<div class="card-example">
+					<div class="card-item header-card-example"></div>
+					<div class="card-item main-card-example"></div>
+					<div class="card-item image-card-example"></div>
+					<div class="extra-info-block">
+						<div class="card-item phone-card-example"></div>
+						<div class="card-item phone2-card-example none"></div>
+						<div class="card-item mail-card-example"></div>
+						<div class="card-item location-card-example"></div>
+					</div>
+				</div>
+				<div class="export-button">Сохранить</div>
+			</div>
+		</div>
+	</main>
+	<script type="text/javascript" src="script/constr_script.js"></script>
+	<!-- Маска для телефона -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+	<script>
+		$(function() {
+		$('.phone').mask('+7(000)000-00-00');
+		$('.phone2').mask('+7(000)000-00-00');
+		});
+
+		// const fileUploader = document.getElementById('image-upload');
+		// const reader = new FileReader();
+		// const imageGrid = document.getElementById('preview');
+
+		// fileUploader.addEventListener('change', (event) => {
+		// const files = event.target.files;
+		// const file = files[0];
+		// reader.readAsDataURL(file);
+		
+		// reader.addEventListener('load', (event) => {
+		// 	const img = document.createElement('img');
+		// 	imageGrid.appendChild(img);
+		// 	img.src = event.target.result;
+		// 	img.alt = file.name;
+		// });
+		// });
+	</script>  
+</body>
+</html>
