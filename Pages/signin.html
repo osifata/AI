@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/style_signin.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Авторизация</h2>
+        <form action="/login" method="POST">
+            <div class="input-group">
+                <input type="text" id="username" name="username" required placeholder="Логин">
+                <input type="password" id="password" name="password" required placeholder="Пароль">
+            </div>
+            <button onclick="window.location.href='form.html'">Войти</button> 
+            <!-- тут должно быть обработка пароля и логина и потом переход на страницу другую -->
+        </form>
+        <p class="signup-link">Уже есть аккаунт? <a href="signup.html">Зарегистрироваться</a></p>
+    </div>
+</body>
+</html>

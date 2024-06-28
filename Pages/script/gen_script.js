@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0; // Изменяем начальный индекс на второе изображение
 
     function updateScroll() {
-        const offset = currentIndex * -95; // Рассчитываем смещение
+        const offset = currentIndex * -80; // Рассчитываем смещение
         imageWrapper.style.transform = `translateX(${offset}%)`;
     }
 
