@@ -37,7 +37,7 @@
                     <span class="tab">8</span>
                     <span class="tab">9</span>
                 </div>
-                <form action="#">
+                <form action="#" class="form-list">
                     <div class="question-list" role="tab-list">
                         <div role="tabpanel" id="link1" class="tabpanel">
                             <h3>Рекламируемая страница</h3>
@@ -64,7 +64,7 @@
                         </div>
                         <div role="tabpanel" id="format1" class="tabpanel select-box hidden">
                             <h3>Формат объявления</h3>
-                            <select name="sources" id="sources" class="form-input custom-select sources" placeholder="Формат объявления">
+                            <select name="sources" id="sources" class="form-input custom-select sources" placeholder="Формат объявления" autocomplete="off">
                                 <option value="vertical">Вертикальный</option>
                                 <option value="horizontal">Горизонтальный</option>
                                 <option value="square">Квадратный</option>
@@ -83,7 +83,7 @@
                             <div class="inner-text">Опишите, что вы должно быть на фоновом изображении объявления</div>
                             <textarea name="image" class="form-input resizing" placeholder="Описание изображения"></textarea>
                         </div>
-                        <div role="tabpanel" id="color1" class="tabpanel hidden">
+                        <div role="tabpanel" id="color1" class="tabpanel hidden tab-check">
                             <h3>Цветовые схемы</h3>
                             <div class="inner-text">Выберете до 3 цветовых палитр, кторые соотвествуют вашему бизнесу</div>
                             <div class="checkbox-group">
@@ -168,12 +168,10 @@
                                 <option value="choice1">Перейти на сайт</option>
                                 <option value="choice2">Узнать больше</option>
                                 <option value="choice3">Подать заявку</option>
-                                <option value="choice4">Забронировать</option>
-                                <option value="choice5">Выбрать</option>
-                                <option value="choice6">Смотреть</option>
-                                <option value="choice7">Зарегестрироваться</option>
-                                <option value="choice8">Попробовать</option>
-                                <option value="choice9">Получить предложение</option>
+                                <option value="choice4">Выбрать</option>
+                                <option value="choice5">Смотреть</option>
+                                <option value="choice6">Зарегестрироваться</option>
+                                <option value="choice7">Забронировать</option>
                             </select>
                             <h3>Ссылка на кнопке</h3>
                             <textarea name="btnlink" class="form-input resizing" placeholder="Ссылка на кнопке"></textarea>
@@ -182,7 +180,7 @@
                     <div class="pagination">
                         <a class="btn hidden" id="prev">Предыдущий</a>
                         <a class="btn" id="next">Далее</a>
-                        <button class="btn btn-submit hidden" id="submit">Сгенерировать</button>
+                        <button class="btn btn-submit hidden" onclick="window.location.href='generation.html'" id="submit">Сгенерировать</button>
                     </div>
                 </form>
             </div>
