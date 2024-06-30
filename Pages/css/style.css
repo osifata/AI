@@ -73,10 +73,7 @@
 .action-btn:hover {
     background-color: #CCCBE7;
 }
-a {
-    text-decoration: none;
-    color:#000000;
-}
+
 /* медиазапрос для мобильных устройств */
 @media (max-width: 768px) {
     .container {
