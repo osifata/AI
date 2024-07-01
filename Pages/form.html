@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Анкета</title>
     <link rel="stylesheet" href="css/form_style.css">
-    <link rel="shortcut icon" href="res/logo_icon.png" type="image/png">
 </head>
 <body>
     <!-- <header>
@@ -36,9 +35,8 @@
                     <span class="tab">6</span>
                     <span class="tab">7</span>
                     <span class="tab">8</span>
-                    <span class="tab">9</span>
                 </div>
-                <form action="#" class="form-list">
+                <form name = "frm" action="#" class="form-list">
                     <div class="question-list" role="tab-list">
                         <div role="tabpanel" id="link1" class="tabpanel">
                             <h3>Рекламируемая страница</h3>
@@ -47,42 +45,40 @@
                         <div role="tabpanel" id="occupation1" class="tabpanel hidden">
                             <h3>Как называется ваш бизнес?</h3>
                             <div class="inner-text">Название компании или вид деятельности, например «Торты на заказ»</div>
-                            <textarea name="name" class="form-input resizing" placeholder="Название бизнеса"></textarea>
+                            <textarea name="name" class="form-input " placeholder="Название бизнеса"></textarea>
                             <h3>Чем вы занимаетесь?</h3>
                             <div class="inner-text">Расскажите о своих преимуществах, чтобы заинтересовать клиентов. Например, «Готовим десерты за 1-2 дня. <br>У нас бесплатная доставка по городу»</div>
-                            <textarea name="feature" class="form-input resizing" placeholder="Особенности и преимущества вашего бизнеса"></textarea>
+                            <textarea name="feature" class="form-input2 " placeholder="Особенности и преимущества вашего бизнеса"></textarea>
                         </div>
                         <div role="tabpanel" id="contacts1" class="tabpanel hidden">
                             <h3>Адрес в объявлении</h3>
-                            <textarea name="adress" class="form-input resizing" placeholder="Адрес организации"></textarea>
+                            <textarea name="adress" class="form-input " placeholder="Адрес организации"></textarea>
                             <h3>Телефон в объявлении</h3>
-                            <input type="tel" name="tel" class="phone form-input"  placeholder="Телефон организации">
+                            <input type="tel" name="tel" class="phone form-input2"  placeholder="Телефон организации">
                         </div>
-                        <div role="tabpanel" id="interests1" class="tabpanel hidden">
-                            <h3>Интересы и привычки</h3>
-                            <div class="inner-text">Посещаемые сайты и организации, используемые приложения, интересы и привычки аудитории, которой вы хотите показывать объявления</div>
-                            <textarea name="link" class="form-input" placeholder="Опишите аудиторию или введите интересы и привычки"></textarea>
-                        </div>
-                        <div role="tabpanel" id="format1" class="tabpanel select-box hidden">
+                        <div role="tabpanel" id="format1" class="tabpanel hidden">
                             <h3>Формат объявления</h3>
-                            <select name="sources" id="sources" class="form-input custom-select sources" placeholder="Формат объявления" autocomplete="off">
-                                <option value="vertical">Вертикальный</option>
-                                <option value="horizontal">Горизонтальный</option>
-                                <option value="square">Квадратный</option>
-                            </select>
+                            <div class="select">
+                                <select class="select-input">
+                                    <option value="0">Формат объявления</option>
+                                    <option value="1">Горизонтальный</option>
+                                    <option value="2">Вертикальный</option>
+                                    <option value="3">Квадратный</option>
+                                </select>
+                            </div>
                         </div>
                         <div role="tabpanel" id="words1" class="tabpanel hidden">
                             <h3>Ключевые фразы</h3>
-                            <div class="inner-text">Это слова или словосочетания, с которыми совпадает етматика вашего бизнеса</div>
-                            <textarea name="keyword" class="form-input resizing" placeholder="Введите фразу или список фраз"></textarea>
+                            <div class="inner-text">Слова или словосочетания, с которыми совпадает тематика вашего бизнеса</div>
+                            <textarea name="keyword" class="form-input " placeholder="Введите фразу или список фраз"></textarea>
                             <h3>Минус-фразы</h3>
-                            <div class="inner-text">Слова или словосочетания, по которым ваше обяъвление не должно создаваться</div>
-                            <textarea name="minusword" class="form-input resizing" placeholder="Введите фразу или список фраз"></textarea>
+                            <div class="inner-text">Слова или словосочетания, которых не должно быть в объявлении</div>
+                            <textarea name="minusword" class="form-input2" placeholder="Введите фразу или список фраз"></textarea>
                         </div>
                         <div role="tabpanel" id="img1" class="tabpanel hidden">
                             <h3>Изображение</h3>
-                            <div class="inner-text">Опишите, что вы должно быть на фоновом изображении объявления</div>
-                            <textarea name="image" class="form-input resizing" placeholder="Описание изображения"></textarea>
+                            <div class="inner-text">Опишите объект, который будет главным в объявлении</div>
+                            <textarea name="image" class="form-input " placeholder="Описание изображения"></textarea>
                         </div>
                         <div role="tabpanel" id="color1" class="tabpanel hidden tab-check">
                             <h3>Цветовые схемы</h3>
@@ -91,7 +87,7 @@
                                 <div class="checkbox">
                                     <label class="checkbox-wrapper">
                                         <input type="checkbox" class="checkbox-input" />
-                                        <div class="checkbox-tile  black">
+                                        <div class="checkbox-tile black">
                                             <div class="checkbox-label">Серый</div>
                                         </div>
                                     </label>
@@ -130,7 +126,7 @@
                                 </div>
                                 <div class="checkbox">
                                     <label class="checkbox-wrapper">
-                                        <input type="checkbox" class="checkbox-input form-input" />
+                                        <input type="checkbox" class="checkbox-input" />
                                         <div class="checkbox-tile cyan">
                                             <div class="checkbox-label">Бирюзовый</div>
                                         </div>
@@ -163,25 +159,28 @@
                             </div>
                         </div>
                         <div role="tabpanel" id="button1" class="tabpanel hidden">
-                            <h3>Текст на нопке</h3>
-                            <div class="inner-text">Повысьте эффективновсть объявления за счёт подходчящего призыва к действию и ссылки на кнопке</div>
-                            <select name="sources" id="sources" class="form-select custom-select sources" placeholder="Текст на кнопке">
-                                <option value="choice1">Перейти на сайт</option>
-                                <option value="choice2">Узнать больше</option>
-                                <option value="choice3">Подать заявку</option>
-                                <option value="choice4">Выбрать</option>
-                                <option value="choice5">Смотреть</option>
-                                <option value="choice6">Зарегестрироваться</option>
-                                <option value="choice7">Забронировать</option>
-                            </select>
-                            <h3>Ссылка на кнопке</h3>
-                            <textarea name="btnlink" class="form-input resizing" placeholder="Ссылка на кнопке"></textarea>
+                            <h3>Текст на кнопке</h3>
+                            <div class="inner-text">Повысьте эффективновсть объявления за счёт подходящего призыва к действию</div>
+                            <div class="select">
+                                <select class="select-input">
+                                    <option value="0">Текст на кнопке</option>
+                                    <option value="1">Перейти на сайт</option>
+                                    <option value="2">Узнать больше</option>
+                                    <option value="3">Подать заявку</option>
+                                    <option value="4">Выбрать</option>
+                                    <option value="5">Смотреть</option>
+                                    <option value="6">Зарегистрироваться</option>
+                                    <option value="7">Забронировать</option>
+                                    <option value="8">Подписаться</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
+                    
                     <div class="pagination">
                         <a class="btn hidden" id="prev">Предыдущий</a>
                         <a class="btn" id="next">Далее</a>
-                        <button class="btn btn-submit hidden" onclick="window.location.href='generation.html'" id="submit">Сгенерировать</button>
+                        <a class="btn btn-submit hidden" id="submit" href="generation.html">Сгенерировать</a>
                     </div>
                 </form>
             </div>
@@ -196,42 +195,6 @@
 		$(function() {
 		$('.phone').mask('+7(000)000-00-00');
 		});
-
-        $(".custom-select").each(function() {
-        var classes = $(this).attr("class"),
-            id      = $(this).attr("id"),
-            name    = $(this).attr("name");
-        var template =  '<div class="' + classes + '">';
-            template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
-            template += '<div class="custom-options">';
-            $(this).find("option").each(function() {
-                template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
-            });
-        template += '</div></div>';
-        
-        $(this).wrap('<div class="custom-select-wrapper"></div>');
-        $(this).hide();
-        $(this).after(template);
-        });
-        $(".custom-option:first-of-type").hover(function() {
-        $(this).parents(".custom-options").addClass("option-hover");
-        }, function() {
-        $(this).parents(".custom-options").removeClass("option-hover");
-        });
-        $(".custom-select-trigger").on("click", function() {
-        $('html').one('click',function() {
-            $(".custom-select").removeClass("opened");
-        });
-        $(this).parents(".custom-select").toggleClass("opened");
-        event.stopPropagation();
-        });
-        $(".custom-option").on("click", function() {
-        $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
-        $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
-        $(this).addClass("selection");
-        $(this).parents(".custom-select").removeClass("opened");
-        $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
-        });
 
         $('input[type=checkbox]').on('change', function (e) {
             if ($('input[type=checkbox]:checked').length > 3) {
