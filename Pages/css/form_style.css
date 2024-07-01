@@ -94,7 +94,7 @@ a {
 .form-list {
     display: flex;
     flex-direction: column;
-    row-gap: 5.5vh; 
+    row-gap: 5vh; 
 }
 .form-input {
     width: 100%;
@@ -121,22 +121,48 @@ a {
     box-shadow: #f8fafc 0px 0px 0px 2px, #CCCBE7 0px 0px 0px 6px, #0000 0px 1px 2px 0px;
 }
 
+.form-input2 {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: .5rem;
+    box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .1);
+    padding: 1rem;
+    box-sizing: border-box;
+    color: black;
+    transition: ease-in-out .3s all;
+}
+  
+.form-input2::placeholder {
+    color: #cbd5e1;
+}
+  
+.form-input2:focus {
+    outline: none;
+    border-color: #2684FF;
+}
+  
+.btn:focus-within,
+.form-input2:focus-within {
+    box-shadow: #f8fafc 0px 0px 0px 2px, #CCCBE7 0px 0px 0px 6px, #0000 0px 1px 2px 0px;
+}
+
 textarea {  
     max-width: 500px;
-    max-height: 300px;
+    max-height: 200px;
     min-width: 200px;
-    min-height: 100px;
-    resize: vertical;
+    min-height: 70px;
+    resize: none;
 }
-.phone {
+.phone {  
     max-width: 500px;
-    max-height: 300px;
+    max-height: 200px;
     min-width: 200px;
-    min-height: 100px;
-    
+    min-height: 70px;
+    resize: none;
 }
+
 .phone::placeholder {
-    transform: translateY(-25px);
+    transform: translateY(-10px);
 }
 .question-list {
     display: flex;
@@ -153,122 +179,48 @@ textarea {
     margin: auto;
     min-height: 40vh;
     width: 30vw;
-    row-gap: 2vh;
+    row-gap: 1.5vh;
 }
 
-.custom-select-wrapper {
-    position: relative;
-    display: inline-block;
-    user-select: none;
-  }
-    .custom-select-wrapper select {
-      display: none;
-    }
-    .custom-select {
-      position: relative;
-      display: inline-block;
-      border: none;
-      box-shadow: none;
-      margin-bottom: 20px;
-    }
-      .custom-select-trigger {
-        position: relative;
-        display: block;
-        max-width: 800px;
-        height: 60px;
-        min-width: 200px;
-        /* min-height: 100px; */
-        padding: 15px 70px 0 10px;
-        font-size: 16px;
-        color: black;
-        background: #CCCBE7;
-        border-radius: 10px;
-        cursor: pointer;
-        border: none;
-      }
-        .custom-select-trigger:after {
-          position: absolute;
-          display: block;
-          content: '';
-          width: 10px; 
-          height: 10px;
-          top: 50%; right: 25px;
-          margin-top: -3px;
-          border-bottom: 2px solid black;
-          border-right: 2px solid black;
-          transform: rotate(45deg) translateY(-50%);
-          transition: all .4s ease-in-out;
-          transform-origin: 50% 0;
-        }
-        .custom-select.opened .custom-select-trigger:after {
-          margin-top: 3px;
-          transform: rotate(-135deg) translateY(-50%);
-        }
-    .custom-options {
-      position: absolute;
-      display: block;
-      top: 100%; left: 0; right: 0;
-      min-width: 100%;
-      margin: 15px 0;
-      border: 1px solid #b5b5b5;
-      border-radius: 4px;
-      box-sizing: border-box;
-      background: #fff;
-      transition: all .4s ease-in-out;
 
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transform: translateY(-15px);
+select {
+    appearance: none;
+    border: 0;
+    outline: 0;
+    background: none;
+    color: inherit;
+    box-shadow: none;
+}
+.select {
+    position: relative;
+    display: flex;
+    max-width: 300px;
+    max-height: 70px;
+    min-width: 100px;
+    min-height: 50px;
+    margin-left: 15%;
+    background: #CCCBE7;
+    border-radius: .5rem;
+    overflow-y: auto;
+    select {
+      flex: 1;
+      padding: 1em;
+      cursor: pointer;
     }
-    .custom-select.opened .custom-options {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: all;
-      transform: translateY(0);
-      z-index: 100;
-      
+    &::after {
+      content: "\25BC";
+      position: absolute;
+      right: 1rem;
+      top: 0.8rem;
+      transition: all .3s ease-in-out;
+      pointer-events: none; 
+      color: #F1F1F1;
     }
-      .custom-options:before {
-        position: absolute;
-        display: block;
-        content: '';
-        bottom: 100%; 
-        right: 25px;
-        width: 7px; 
-        height: 7px;
-        margin-bottom: -4px;
-        border-top: 1px solid #b5b5b5;
-        border-left: 1px solid #b5b5b5;
-        background: #fff;
-        transform: rotate(45deg);
-        transition: all .4s ease-in-out;
-      }
-      .option-hover:before {
-        background: #f9f9f9;
-      }
-      .custom-option {
-        position: relative;
-        display: block;
-        padding: 0 22px;
-        border-bottom: 1px solid #b5b5b5;
-        font-size: 16px;
-        color: black;
-        line-height: 45px;
-        cursor: pointer;
-        transition: all .4s ease-in-out;
-      }
-      .custom-option:first-of-type {
-        border-radius: 4px 4px 0 0;
-      }
-      .custom-option:last-of-type {
-        border-bottom: 0;
-        border-radius: 0 0 4px 4px;
-      }
-      .custom-option:hover,
-      .custom-option.selection {
-        background: rgba(34, 60, 80, 0.2);
-      }
+    &:hover::after {
+      color: black;
+      animation: all .3s ease-in-out;
+    }
+}
   
 
 
@@ -298,11 +250,12 @@ textarea {
   
 .btn-submit {
     color: #000000;
-    background-color: #FFF069;
+    background-color: #CCCBE7;
+    font-weight: bold;
 }
   
 .btn-submit:hover {
-    background-color: #CCCBE7;
+    background-color: #ddd;
 }
 
 .pagination {
@@ -460,7 +413,16 @@ textarea {
 .purple {
     background: linear-gradient(90deg, rgba(178,96,255,0.8) 0%, rgba(118,0,214,0.8) 100%);
 }
-
+@media (max-width: 1130px) {
+    .select {
+        margin-left: 3%;
+    }
+}
+@media (max-width: 900px) {
+    .form-list {
+        row-gap: 7vh; 
+    }
+}
 @media (max-width: 768px) {
     #shadow {
         font-size: 6.5vh;
@@ -499,13 +461,21 @@ textarea {
         width: 50vw;
     }
     .form-list {
-        row-gap: 15vh; 
+        row-gap: 11vh; 
     }
     .tab-check {
-        width: 57vw;
+        width: 55vw;
     }
     .checkbox-tile {
         width: 23vw;
         min-height: 7vh;
+    }
+    .select {
+        margin-left: 7%;
+    }
+}
+@media (max-width: 590px) {
+    .form-list {
+        row-gap: 13.5vh; 
     }
 }
