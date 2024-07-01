@@ -58,14 +58,53 @@ function updateStatusDisplay() {
 
 function validateEntry() {
   let input = tabPanels[currentStep].querySelector('.form-input')
-//   let checkbox = tabPanels[currentStep].querySelector('.checkbox-input')
+  let input2 = tabPanels[currentStep].querySelector('.form-input2')
+  let inputAll = tabPanels[currentStep].querySelectorAll('.form-input2')
+  let select = tabPanels[currentStep].querySelector('.select-input')
+  let checkboxes = tabPanels[currentStep].querySelectorAll('input[type="checkbox"]')
+
+  function atLeastOneCheckboxChecked(checkboxes) {
+    return Array.from(checkboxes).some(checkbox => checkbox.checked);
+  }
+
   nextButton.setAttribute('disabled', true)
   submitButton.setAttribute('disabled', true)
-  
 
-  setButtonPermissions(input)
-  input.addEventListener('input', () => setButtonPermissions(input))
-  input.addEventListener('blur', () => setButtonPermissions(input))
+  if (input && input2) {
+    inputAll.forEach(element => {
+      setButtonPermissions(element); 
+      element.addEventListener('input', () => setButtonPermissions(element))
+    });
+  } else if (input || select || checkboxes) {
+      if (input) {
+        setButtonPermissions(input)
+        input.addEventListener('input', () => setButtonPermissions(input))
+      }
+      if (select) {
+        select.addEventListener('change', function() {
+          if (this.value == '0') {
+            nextButton.setAttribute('disabled', true)
+            submitButton.setAttribute('disabled', true)
+          } else{
+            nextButton.removeAttribute('disabled')
+            submitButton.removeAttribute('disabled')
+          }
+        });
+      }
+      if (checkboxes) {
+        checkboxes.forEach(function(checkbox) {
+          checkbox.addEventListener('change', function() {
+            if (!atLeastOneCheckboxChecked(checkboxes)) {
+              nextButton.setAttribute('disabled', true)
+              submitButton.setAttribute('disabled', true)
+            } else { 
+              nextButton.removeAttribute('disabled')
+              submitButton.removeAttribute('disabled')
+            }
+          })
+        });
+      }
+  }
 }
 
 function setButtonPermissions(input) {
@@ -77,5 +116,3 @@ function setButtonPermissions(input) {
     submitButton.removeAttribute('disabled')
   }
 }
-
-
