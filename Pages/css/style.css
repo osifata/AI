@@ -44,10 +44,16 @@
     position: relative;
 }
 
-.right-block p {
+.slogan {
     text-align: center;
     font-size: 32px;
-    margin-bottom: 200px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.desc {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 100px;
     position: relative;
 }
 
@@ -59,7 +65,7 @@
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
-    font-size: 36px;
+    font-size: 1.3em;
     cursor: pointer;
     background-color: #FFF069;
     color: #000000;
@@ -68,6 +74,7 @@
     border-radius: 5px;
     box-shadow: 4px 4px 0px -1px rgba(34, 60, 80, 0.2);
     transition: background-color 0.3s ease;
+    margin-bottom: 20px;
 }
 
 .action-btn:hover {
@@ -97,15 +104,18 @@
         font-size: 20px;
     }
 
-    .right-block p {
+     .slogan {
         font-size: 16px;
-        margin-bottom: 100px;
     }
 
+    .desc {
+        font-size: 14px;
+        margin-bottom: 100px;
+    }
     .action-btn {
         width: 150px;
         height: 60px;
-        font-size: 16px;
-        padding: 10px;
+        font-size: 14px;
+        padding: 2px;
     }
 }
