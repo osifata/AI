@@ -52,7 +52,7 @@ def get_text_img(file_name, text, font_size, font_path, color, position, align):
     draw = ImageDraw.Draw(img)
     draw.text((0,0), text, font = font, align = align, fill = color) 
     img.save(file_name,"PNG")
-    
+
     img = cv2.imread(file_name, cv2.IMREAD_UNCHANGED)
     if color == (255, 255, 255, 255):
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)

@@ -29,7 +29,7 @@ def get_default_promts():
                         hyper detailed 8k painting, 8k concept, muted colors, bokeh, f1.0 lens'
   return high_quality_promt, negative_promt
 
-def SDXL_generate_img(promt, negative_promt, generation_parametrs, steps, aspect_ratio, api_key = ''):
+def SDXL_generate_img(promt, negative_promt, generation_parametrs, steps, aspect_ratio, api_key = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IjdkYzBhMTc5MGRhNTEzMWE1MDMyY2E4YzU0YjQyYTUxIiwiY3JlYXRlZF9hdCI6IjIwMjQtMDYtMzBUMDU6MDc6MzcuNzMxNjQ4In0.alRiKVsXXyP8f2c6Sq8yYgLHbAcNpGPMBU6oa0Abjwc'):
   monster_client = client(api_key)
   guidance_scale, enhance, optimize, safe_filter, seed, samples = generation_parametrs
   model = 'sdxl-base' 

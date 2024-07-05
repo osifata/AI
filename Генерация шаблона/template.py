@@ -46,7 +46,7 @@ def get_position(
                 horizontal_size=100, vertical_size=50, 
                 offset_x = 0, offset_y = 0):
     margin_x, margin_y = 10, 10
-    grid_step_x, grid_step_y = 25, 50 # размер клеток сетки, чтобы выравнивать элементы 
+    grid_step_x, grid_step_y = 50, 50 # размер клеток сетки, чтобы выравнивать элементы
     # if horizontal == 'left':
     x = steps_x*grid_step_x + margin_x + offset_x
     # else: # left
@@ -83,7 +83,7 @@ def create_portrait_template_1(back_img_path, obj_img_path, img_size, fonts, col
         'address_text':{
             'text':add_line_break("ул. Снежная д.3", 20),
             # 'pos':(get_position('left', 'top', 1, 19)), # right и bottom пока не работают, убрала эти поля полностю
-            'pos':(get_position(1, 19)),
+            'pos':(get_position(11, 19)),
             'font': fonts['helvetica'],
             'font_size':26,
             'color': colors['black'],
@@ -91,15 +91,15 @@ def create_portrait_template_1(back_img_path, obj_img_path, img_size, fonts, col
         }, 
         'phone_text':{
             'text':phone_format('88005353535'),
-            'pos':(get_position(10, 18)),
+            'pos':(get_position(8, 18)),
             'font': fonts['helvetica'],
-            'font_size':56,
+            'font_size':46,
             'color': colors['black'],
             'align': 'right'
         }, 
         'button_text':{
             'text':'Узнать больше',
-            'pos':(get_position(1, 16, offset_x=20, offset_y=20)),
+            'pos':(get_position(1, 18, offset_x=20, offset_y=20)),
             'font': fonts['helvetica'],
             'font_size':40,
             'color': colors['black'],
@@ -128,23 +128,23 @@ def create_portrait_template_1(back_img_path, obj_img_path, img_size, fonts, col
         'white_button_img':{
             'path_to_img': "template_elements/white_button.png",
             'size': 1,
-            'pos':(get_position(1, 16)),
+            'pos':(get_position(1, 18)),
             'rotation': 0, 
             'blur': (0, 0),
             'brightness': 1
         },
         'obj_shadow_img':{ # тень для объекта - то же изображение, но с блюром
             'path_to_img': f'{obj_img_path}.png',
-            'size': 0.8,
-            'pos':(get_position(2, 5, offset_x=5, offset_y=5)), # координаты тени должны совпадать с объектом + отступ
+            'size': 0.7,
+            'pos':(get_position(4, 6, offset_x=5, offset_y=5)), # координаты тени должны совпадать с объектом + отступ
             'rotation': -45, 
             'blur': (70, 70),
             'brightness': 1
         },
         'obj_img':{
             'path_to_img': f'{obj_img_path}.png',
-            'size': 0.8,
-            'pos':(get_position(2, 5)),
+            'size': 0.7,
+            'pos':(get_position(4, 6)),
             'rotation': -45, 
             'blur': (0, 0),
             'brightness': 1
@@ -160,14 +160,150 @@ def create_portrait_template_1(back_img_path, obj_img_path, img_size, fonts, col
     cv2.imwrite(f'template_results/last_result.png', final_template)
     print(f'---ШАБЛОН {img_size} СОХРАНЕН')
 
+def create_portrait_template_2(back_img_path, obj_img_path, img_size, fonts, colors):
+    texts = {
+        'logo_text': {
+            'text': add_line_break("КОМПАНИЯ", 7),  # число символов в одной строке до переноса
+            # 'pos':(get_position('left', 'top', 1, 1)), # отсчет от верхнего левого края, (1,1) начальные коожинаты сетки
+            'pos': (get_position(10, 0)),
+            'font': fonts['helvetica'],
+            'font_size': 36,
+            'color': colors['black'],
+            'align': 'left'
+        },
+        'title_text':{
+            'text':add_line_break("ИГРОВАЯ МЫШЬ", 7), # число символов в одной строке до переноса
+            # 'pos':(get_position('left', 'top', 1, 1)), # отсчет от верхнего левого края, (1,1) начальные коожинаты сетки
+            'pos':(get_position(1, 2)),
+            'font': fonts['helvetica'],
+            'font_size': 56,
+            'color': colors['black'],
+            'align': 'left'
+        },
+        'subtitle_text':{
+            'text':add_line_break("Выгодные цены на игровые мышки", 20),
+            'pos':(get_position(2, 8)),
+            'font': fonts['helvetica'],
+            'font_size': 24,
+            'color': colors['black'],
+            'align': 'left'
+        },
+        'subtitle_text_2': {
+            'text': add_line_break("Подойдут для всех пальцев", 20),
+            'pos': (get_position(2, 11)),
+            'font': fonts['helvetica'],
+            'font_size': 24,
+            'color': colors['black'],
+            'align': 'left'
+        },
+        'address_text':{
+            'text':add_line_break("ул. Снежная д.3", 20),
+            # 'pos':(get_position('left', 'top', 1, 19)), # right и bottom пока не работают, убрала эти поля полностю
+            'pos':(get_position(11, 16)),
+            'font': fonts['helvetica'],
+            'font_size':26,
+            'color': colors['black'],
+            'align': 'right'
+        },
+        'phone_text':{
+            'text':phone_format('+7(800)555-35-35'),
+            'pos':(get_position(8, 15)),
+            'font': fonts['helvetica'],
+            'font_size':46,
+            'color': colors['black'],
+            'align': 'right'
+        },
+        'button_text':{
+            'text':'Узнать больше',
+            'pos':(get_position(1, 17, offset_x=20, offset_y=20)),
+            'font': fonts['helvetica'],
+            'font_size':40,
+            'color': colors['black'],
+            'align': 'left'
+        }
+    }
+
+
+    images = {
+        'back_img':{
+            'path_to_img': f'{back_img_path}.png',
+            'size': 1, # коэффициет (1 - не менять размер)
+            'pos':(0, 0), # px
+            'rotation': 0, # градусов
+            'blur': (10, 10), # размер блюра
+            'brightness': 0.5 # яркость, 1 обычная
+        },
+        'white_circle_img':{
+            'path_to_img': "template_elements/white_circle.png",
+            'size': 1,
+            'pos': (0, 0),
+            'rotation': 0,
+            'blur': (0, 0),
+            'brightness': 1
+        },
+        'white_button_img':{
+            'path_to_img': "template_elements/white_button.png",
+            'size': 1,
+            'pos':(get_position(1, 17)),
+            'rotation': 0,
+            'blur': (0, 0),
+            'brightness': 1
+        },
+        'line_img': {
+            'path_to_img': "template_elements/line.png",
+            'size': 1,
+            'pos': (get_position(1, 2)),
+            'rotation': 0,
+            'blur': (0, 0),
+            'brightness': 1
+        },
+        'white_square_img': {
+            'path_to_img': "template_elements/white_square.png",
+            'size': 1,
+            'pos': (get_position(1, 7)),
+            'rotation': 0,
+            'blur': (0, 0),
+            'brightness': 1
+        },
+        'obj_shadow_img':{ # тень для объекта - то же изображение, но с блюром
+            'path_to_img': f'{obj_img_path}.png',
+            'size': 0.7,
+            'pos':(get_position(4, 5, offset_x=10, offset_y=10)), # координаты тени должны совпадать с объектом + отступ
+            'rotation': -45,
+            'blur': (70, 70),
+            'brightness': 1
+        },
+        'obj_img':{
+            'path_to_img': f'{obj_img_path}.png',
+            'size': 0.7,
+            'pos':(get_position(4, 5)),
+            'rotation': -45,
+            'blur': (0, 0),
+            'brightness': 1
+        }
+    }
+
+    final_template = template_from_images(images, img_size)
+    final_template = paste_text_images(final_template, texts)
+
+    uniq_filename = str(datetime.datetime.now().date()) + '_' + str(datetime.datetime.now().time()).replace(':', '-')
+    # uniq_filename = 'result'
+    cv2.imwrite(f'template_results/{uniq_filename}.png', final_template)
+    cv2.imwrite(f'template_results/last_result.png', final_template)
+    print(f'---ШАБЛОН {img_size} СОХРАНЕН')
+
+
+    # cv2.imshow('img', image)
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
 
 # --------------------------------------------------------
 def create_square_template_1(back_img_path, obj_img_path, img_size, fonts, colors):
     texts = {
         'title_text':{
-            'text':add_line_break("ИГРОВАЯ МЫШЬ", 7), # число символов в одной строке до переноса
+            'text':add_line_break("ИГРОВАЯ МЫШЬ", 20), # число символов в одной строке до переноса
             # 'pos':(get_position('left', 'top', 1, 1)), # отсчет от верхнего левого края, (1,1) начальные коожинаты сетки
-            'pos':(get_position(0, 0, offset_x=20, offset_y=20)),
+            'pos':(get_position(1, 1)),
             'font': fonts['helvetica'],
             'font_size':56,
             'color': colors['black'],
@@ -175,7 +311,7 @@ def create_square_template_1(back_img_path, obj_img_path, img_size, fonts, color
         }, 
         'subtitle_text':{
             'text':add_line_break("6 кнопок полностью программируемые", 20),
-            'pos':(get_position(7, 2)),
+            'pos':(get_position(12, 2)),
             'font': fonts['helvetica'],
             'font_size':36,
             'color': colors['black'],
@@ -184,15 +320,15 @@ def create_square_template_1(back_img_path, obj_img_path, img_size, fonts, color
         'address_text':{
             'text':add_line_break("ул. Снежная д.3", 20),
             # 'pos':(get_position('left', 'top', 1, 19)), # right и bottom пока не работают, убрала эти поля полностю
-            'pos':(get_position(6, 8)),
+            'pos':(get_position(15, 19)),
             'font': fonts['helvetica'],
             'font_size':26,
-            'color': colors['white'],
+            'color': colors['black'],
             'align': 'right'
         }, 
         'phone_text':{
             'text':phone_format('88005353535'),
-            'pos':(get_position(7, 18)),
+            'pos':(get_position(11, 18)),
             'font': fonts['helvetica'],
             'font_size':56,
             'color': colors['black'],
@@ -200,7 +336,7 @@ def create_square_template_1(back_img_path, obj_img_path, img_size, fonts, color
         }, 
         'button_text':{
             'text':'Узнать больше',
-            'pos':(get_position(1, 18)), #, offset_x=20, offset_y=20)),
+            'pos':(get_position(1, 18, offset_x=20, offset_y=20)),
             'font': fonts['helvetica'],
             'font_size':40,
             'color': colors['black'],
@@ -228,8 +364,8 @@ def create_square_template_1(back_img_path, obj_img_path, img_size, fonts, color
         },
         'white_button_img':{
             'path_to_img': "template_elements/white_button.png",
-            'size': 1,
-            'pos':(get_position(1, 10)),
+            'size': 1.2,
+            'pos':(get_position(1, 18)),
             'rotation': 0, 
             'blur': (0, 0),
             'brightness': 1
@@ -237,7 +373,7 @@ def create_square_template_1(back_img_path, obj_img_path, img_size, fonts, color
         'obj_shadow_img':{ # тень для объекта - то же изображение, но с блюром
             'path_to_img': f'{obj_img_path}.png',
             'size': 0.6,
-            'pos':(get_position(3, 4, offset_x=5, offset_y=5)), # координаты тени должны совпадать с объектом + отступ
+            'pos':(get_position(7, 4, offset_x=5, offset_y=5)), # координаты тени должны совпадать с объектом + отступ
             'rotation': -45, 
             'blur': (70, 70),
             'brightness': 1
@@ -245,7 +381,7 @@ def create_square_template_1(back_img_path, obj_img_path, img_size, fonts, color
         'obj_img':{
             'path_to_img': f'{obj_img_path}.png',
             'size': 0.6,
-            'pos':(get_position(3, 4)),
+            'pos':(get_position(7, 4)),
             'rotation': -45, 
             'blur': (0, 0),
             'brightness': 1
@@ -261,52 +397,46 @@ def create_square_template_1(back_img_path, obj_img_path, img_size, fonts, color
     cv2.imwrite(f'template_results/last_result.png', final_template)
     print(f'---ШАБЛОН {img_size} СОХРАНЕН')
 
-
-# --------------------------------------------------------
-def create_square_template_2(back_img_path, obj_img_path, img_size, fonts, colors):
-    pass
-
-
 # --------------------------------------------------------
 def create_landscape_template_1(back_img_path, obj_img_path, img_size, fonts, colors):
     texts = {
         'title_text':{
-            'text':add_line_break("ИГРОВАЯ МЫШЬ", 7), # число символов в одной строке до переноса
+            'text':add_line_break("ИГРОВАЯ МЫШЬ", 20), # число символов в одной строке до переноса
             # 'pos':(get_position('left', 'top', 1, 1)), # отсчет от верхнего левого края, (1,1) начальные коожинаты сетки
-            'pos':(get_position(0, 0, offset_x=20, offset_y=20)),
-            'font': fonts['helvetica'],
+            'pos':(get_position(12, 4)),
+            'font': fonts['impact'],
             'font_size':56,
-            'color': colors['white'],
+            'color': colors['black'],
             'align': 'left'
         }, 
         'subtitle_text':{
             'text':add_line_break("6 кнопок полностью программируемые", 20),
-            'pos':(get_position(7, 2)),
+            'pos':(get_position(13, 6)),
             'font': fonts['helvetica'],
-            'font_size':36,
-            'color': colors['white'],
+            'font_size':16,
+            'color': colors['black'],
             'align': 'left'
         }, 
         'address_text':{
-            'text':add_line_break("ул. Снежная д.3", 20),
+            'text':add_line_break("Россия, Иркутск", 20),
             # 'pos':(get_position('left', 'top', 1, 19)), # right и bottom пока не работают, убрала эти поля полностю
-            'pos':(get_position(6, 8)),
+            'pos':(get_position(15, 14)),
             'font': fonts['helvetica'],
             'font_size':26,
-            'color': colors['white'],
+            'color': colors['black'],
             'align': 'right'
         }, 
         'phone_text':{
             'text':phone_format('88005353535'),
-            'pos':(get_position(6, 14)),
+            'pos':(get_position(15, 13)),
             'font': fonts['helvetica'],
-            'font_size':56,
-            'color': colors['white'],
+            'font_size':30,
+            'color': colors['black'],
             'align': 'right'
         }, 
         'button_text':{
             'text':'Узнать больше',
-            'pos':(get_position(1,11)), #, offset_x=20, offset_y=20)),
+            'pos':(get_position(12, 10, offset_x=20, offset_y=20)),
             'font': fonts['helvetica'],
             'font_size':40,
             'color': colors['black'],
@@ -335,24 +465,24 @@ def create_landscape_template_1(back_img_path, obj_img_path, img_size, fonts, co
         'white_button_img':{
             'path_to_img': "template_elements/white_button.png",
             'size': 1,
-            'pos':(get_position(1, 10)),
+            'pos':(get_position(12, 10)),
             'rotation': 0, 
             'blur': (0, 0),
             'brightness': 1
         },
-        'obj_shadow_img':{ # тень для объекта - то же изображение, но с блюром
+        'obj_shadow_img': {  # тень для объекта - то же изображение, но с блюром
             'path_to_img': f'{obj_img_path}.png',
-            'size': 0.4,
-            'pos':(get_position(5, 4, offset_x=5, offset_y=5)), # координаты тени должны совпадать с объектом + отступ
-            'rotation': -45, 
+            'size': 0.5,
+            'pos': (get_position(1, 2, offset_x=5, offset_y=5)),  # координаты тени должны совпадать с объектом + отступ
+            'rotation': -45,
             'blur': (70, 70),
             'brightness': 1
         },
-        'obj_img':{
+        'obj_img': {
             'path_to_img': f'{obj_img_path}.png',
-            'size': 0.4,
-            'pos':(get_position(5, 4)),
-            'rotation': -45, 
+            'size': 0.5,
+            'pos': (get_position(1, 2)),
+            'rotation': -45,
             'blur': (0, 0),
             'brightness': 1
         }
